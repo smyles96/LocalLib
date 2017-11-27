@@ -1,0 +1,56 @@
+<div class="modal-header modal-header-style">
+    <h2 class="modal-title" id="header">Book Information</h2>
+</div>
+
+<div class="modal-body modal-body-style">
+
+	<!-- Book Image -->
+	<div class="row centered-details">
+        <div class="media" style="height: 100%; width: 100%">
+            <img ng-src="{{ book.cover.medium }}" class="media-object center-block"
+                 style="width: 225px; height: 400px;"
+				 onerror="src = 'https://www.forewordreviews.com/books/covers/wheres-your-smile-crocodile.jpg'">
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- Book Information Table -->
+    <div class="row centered-details">
+        <table class="table table-hover" id="book-details-table" align="center">
+            <!-- Header Row -->
+			<tr>
+				<th style="width: 45%">Property</th>
+				<th style="width: 55%">Value</th>
+            </tr>
+            
+            <!-- Basic Info -->
+			<tr>
+				<td>Author</td>
+                <td>{{ book.authors[0].name || 'N/A' }}</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>{{ book.status || 'N/A' }}</td>
+            </tr>
+            <tr>
+                <td>Publish Date</td>
+                <td>{{ book.publishDate || 'N/A' }}</td>
+            </tr>
+		</table>
+    </div>
+	
+</div>
+
+<div class="modal-footer modal-footer-style">
+	<div class="col-sm-6 text-left">
+        <div class="previous">
+          <button type="button" class="btn btn-info center-block" ng-click="redirect()">Read</button>
+        </div>
+    </div>
+	<div class="col-sm-6 text-right">   
+        <div class="next">
+          <button type="button" class="btn btn-warning center-block" ng-click="back()">Close</button>
+        </div>
+    </div>
+</div>

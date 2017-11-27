@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html data-ng-app="localLibraryApp">
+  <head>
+	<!-- Meta Info -->
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="LocalLibrary Server">
+	<meta name="keywords" content="local library">
+	
+	<!--JQuery-->
+    <!--Use in Debug-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.js"></script>
+
+    <!--JQuery MIN-->
+    <!--Use in Production-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+
+    <!--AngularJS-->
+    <!--Use in Debug-->
+    <script data-require="angular.js@1.4.0" data-semver="1.4.0"
+            src="https://code.angularjs.org/1.4.0/angular.js"></script>
+    <script data-require="angular-route@1.4.0-beta.4" data-semver="1.4.0-beta.4"
+            src="https://code.angularjs.org/1.4.0-beta.4/angular-route.js"></script>
+
+    <!--AngularJS MIN-->
+    <!--Use in Production-->
+    <!--<script data-require="angular.js@1.4.0" data-semver="1.4.0" src="https://code.angularjs.org/1.4.0/angular.min.js"></script>
+    <script data-require="angular-route@1.4.0-beta.4" data-semver="1.4.0-beta.4"
+            src="https://code.angularjs.org/1.4.0-beta.4/angular-route.min.js"></script>-->
+	
+    <!--Bootstrap-->
+    <!--Use in Debug-->
+    <!-- <link rel="stylesheet" type="text/css" href="public/css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap-3.3.7-dist/css/bootstrap-theme.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/darkly/bootstrap.min.css">
+    <script src="public/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!--Bootstrap MIN-->
+    <!--Use in Production-->
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+	 
+	 <!-- Link the Bootstrap UI file -->
+    <script data-semver="0.14.3"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+	 
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" href="public/css/stylesheet.css" type="text/css">
+	
+	<!-- Site JS -->
+	<script src="public/javascript/script.js"></script>
+	<script src="public/javascript/services.js"></script>
+    <script src="public/javascript/directives.js"></script>
+	
+	<!-- Title -->
+	<title>Local Library</title>
+  </head>
+  <body>
+  
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" id="library-logo" href="#" style="font-size: 1.7em">The Library</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/#/">Home</a></li>
+				<li><a href="/#/explore">Find Books</a></li>
+			</ul>
+		</div>
+	</nav>
+  
+	<!-- Page Injector -->
+	<div class="container-fluid padding-index">
+		<div data-ng-view=""></div>
+	</div>
+	
+  </body>
+</html>
+
