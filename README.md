@@ -12,7 +12,7 @@ ___
 ## Installation (using Git)
 1) Clone this repository:
 
-`git clone [repo] locallib`
+`git clone https://github.com/skmyles/LocalLib.git locallib`
 
 2) Now change into the directory that was downloaded:
 
