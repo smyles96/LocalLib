@@ -1,8 +1,7 @@
 var app = angular.module('localLibraryApp', ["ngRoute", "ui.bootstrap"]);
 
 app.config(function ($routeProvider, $httpProvider) {
-    $routeProvider.when("/", {templateUrl: "public/home.html", controller: "homeController"})
-		.when("/explore", {templateUrl: "public/explore.html", controller: "bookController"})
+    $routeProvider.when("/", {templateUrl: "public/explore.html", controller: "bookController"})
         .otherwise({redirectTo: "/"});
 });
 
@@ -18,12 +17,6 @@ app.filter('startFrom', function() {
 
 
 // ================= CONTROLLERS =================
-
-app.controller("homeController", ["$scope", "$location", function ($scope, $location) {
-    $scope.explore = function() {
-		$location.path("/explore");
-	}
-}]);
 
 app.controller("bookController", ["$scope", "$location", "OpenLibraryService", "ModalService", function ($scope, $location, OpenLibraryService, ModalService) {
 	$scope.currentPage = 1; // Table page to view
