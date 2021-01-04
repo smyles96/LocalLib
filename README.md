@@ -29,11 +29,6 @@ ___
 | Local Machine   | `localhost:8000`           |
 | Remote Machine  | `<REMOTE-MACHINE-IP>:8000` |
 
-
-If all went as planned you should see something like this appear:
-
-![alt text](http://i68.tinypic.com/2s84dp2.png)
-
 ## FAQ
 * Can I change the port the server runs off of?
 
